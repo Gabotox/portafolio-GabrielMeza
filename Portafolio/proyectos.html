@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/iconos/fantasma.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portafolio - Gabriel Meza</title>
+</head>
+
+<body>
+    <a name="sobremi"></a>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a class="btn-w" id="btn-w" href="https://wa.link/iuhor6">
+        <i class="fa-brands fa-square-whatsapp"></i>
+        Contáctame
+    </a>
+
+    <!-- SECCIÓN HEADER -->
+    <div class="contenedor-header">
+
+        <header class="cab">
+            <div class="logo">
+                <a href="https://www.facebook.com/profile.php?id=100019093819038" class="lin">GM<span>EZA</span></a>
+            </div>
+            <div id="abajo"></div>
+            <nav id="nav" class="navi">
+                <div class="sirv">
+                    <img src="img/yo/ReadyPlayerMe-Avatar.png" alt="" class="Logo_nav">
+                    <ul class="lista">
+                        <li class="list"><a href="index.html" class="lin correr"
+                                onclick="seleccionar(this)">INICIO</a></li>
+                        <li class="list"><a href="index.html#sobremi" class="lin correr" onclick="seleccionar(this)">SOBRE MÍ</a>
+                        </li>
+                        <li class="list"><a href="index.html#skills" class="lin correr" onclick="seleccionar(this)">SKILLS</a>
+                        </li>
+                        <li class="list"><a href="proyectos.html" class="lin correr activar"
+                                onclick="seleccionar(this)">PORTAFOLIO</a></li>
+                        <li class="list"><a href="index.html#contacto" class="lin correr" onclick="seleccionar(this)">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="nav-responsive">
+                <i class="fa-solid fa-bars" id="ponerse"></i>
+                <i class="fa-solid fa-xmark" id="quitarse"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCIÓN DE INICIO -->
+    <div class="inicio_p">
+        <h1 class="titulo_p" data-aos="fade-up">Mis Proyectos</h1>     
+    </div>
+    
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portafolio" class="portafolio">
+
+            <div class="galeria">
+                
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/coffeeexpress.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Coffee Express</h3>
+                                <p class="subt">Cafetería virtual, HTML, CSS, JavaScript, PHP y MySQL</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="#" class="botonesia">Código <i class="fa-solid fa-code" target="_blank"></i></a>
+                            <a href="https://developer-info.000webhostapp.com/Coffee%20Express/Index.php" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/calculadora.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Calculator</h3>
+                                <p class="subt">Calculadora básica, HTML, CSS y JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/Calculator" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Calculator/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                   
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/curso.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Venta de Curso</h3>
+                                <p class="subt">Sitio web elaborado para promocionar curso de HTML/CSS/JS</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/Curso" class="botonesia"  target="_blank">Código <i
+                                    class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Curso/" class="botonesia"  target="_blank">Demo <i
+                                    class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/tienda.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">E-commerce - Ropa</h3>
+                                <p class="subt">Tienda Online, HTML, CSS, JS, PHP y MYSQL (Actualmente en proceso)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="#" class="botonesia">Código <i
+                                    class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Tienda/" class="botonesia"  target="_blank">Demo <i
+                                    class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/store.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">FStore</h3>
+                                <p class="subt">E-commerce, HTML, CSS, JavaScript y JQuery</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/FashionStore" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/FashionStore/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/gamingreach.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Gaming Reach</h3>
+                                <p class="subt">E-commerce, HTML, CSS, JavaScript y AOS(Librería de JS)</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/GamingReach" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/GamingReach/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/geome.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Operador de Figuras Geométricas</h3>
+                                <p class="subt">Calculadora de área, perimetro, etc, HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/OpFigurasGeometricas" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/OpFigurasGeometricas/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/veter.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Veter</h3>
+                                <p class="subt">Tienda Veterinaria, HTML, CSS, JavaScript y AOS(Libreria de JS)</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/Pets" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Pets/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>                        
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/pagehack.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Page Hack</h3>
+                                <p class="subt">Template práctica, HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/Pagehack" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Pagehack/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>                        
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/adivinar.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Adivina el númmero oculto</h3>
+                                <p class="subt">Mini juego, HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/JuegoAdivinar" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/JuegoAdivinar/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>                        
+                    </div>
+
+                    <div class="proyecto" data-aos="fade-right">
+                        <div class="fotog">
+                            <img src="img/proyectos/template.png" alt="">
+                            <div class="overlay">
+                                <h3 class="titulo">Template</h3>
+                                <p class="subt">Template, HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="botonesi">
+                            <a href="https://github.com/Gabotox/Template" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                            <a href="https://gabotox.github.io/Template/" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                        </div>                        
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="pies">
+        <a href="#anun" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="contenedor">
+            <div class="icono">
+                <div class="logo">
+                    <img src="img/yo/ReadyPlayerMe-Avatar.png" alt="">
+                    <h1 class="title">GMEZA</h1>
+                </div>
+                <p class="des">Apasionado por el desarrollo web, estoy constantemente buscando aprender y actualizar mis conocimientos sobre las últimas tecnologías en el campo. Mi experiencia incluye la utilización de HTML, CSS, SASS, Bootstrap, JavaScript, etc... para crear aplicaciones web dinámicas.
+                <br>
+                Si estás interesado en contratar mis servicios o necesitas más información sobre mi, no dude en ponerse en contacto conmigo.
+                </p>
+                <div class="redes">
+                    <a href="https://web.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/gabcoderweb" class="lin" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gabcoderweb" class="lin" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="lin" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabcoderweb" class="lin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="listas">
+                <ul class="lista">
+                    <h4 class="sobre">Sobre mí <i class="fa-regular fa-address-card"></i></h4>
+
+                    <li class="list">
+                        <p class="lin"><i class="fa-solid fa-list-ol"></i> 21 Años de edad</p>
+                    </li>
+                    <li class="list">
+                        <p class="lin"><i class="fa-solid fa-mars-stroke"></i> Masculino</p>
+                    </li>
+                    <li class="list">
+                        <p class="lin"><i class="fa-solid fa-arrow-up-wide-short"></i> 1.78m</p>
+                    </li>
+                    <li class="list">
+                        <p class="lin"><i class="fa-solid fa-cake-candles"></i> 24 Diciembre</p>
+                    </li>
+
+
+                </ul>
+                <ul class="lista">
+                    <h4 class="sobre">Contacto <i class="fa-solid fa-network-wired"></i></h4>
+                    <li class="list">
+                        <a href="https://www.facebook.com/profile.php?id=100019093819038" class="lin"  target="_blank"><i
+                                class="fa-brands fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li class="list">
+                        <a href="https://www.instagram.com/gabcoderweb" class="lin"  target="_blank"><i
+                                class="fa-brands fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li class="list">
+                        <a href="https://www.linkedin.com/in/gabcoderweb" class="lin"  target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> Linkedin</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="creditos">
+            <h5 class="proye">Desarrollado por <a href="https://web.facebook.com/profile.php?id=100019093819038"
+                    class="des" target="_blank">Gabriel Meza</a>
+            </h5>
+
+            <div class="botoni">
+                <p class="pee">&copy; Todos los derechos reservados <br>
+                    Elaboración: HTML-CSS-JAVASCRIPT <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
