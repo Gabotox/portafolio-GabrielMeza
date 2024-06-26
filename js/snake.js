@@ -26,8 +26,6 @@ let comida = { x: 0, y: 0 };
 function dibujarArea() {
     ctx.fillStyle = '#252A2E'; // Color de fondo
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = '#ffffff'; // Color del borde
-    ctx.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
 // Función para dibujar un segmento de la serpiente
@@ -197,20 +195,29 @@ document.addEventListener('keydown', (event) => {
 //Juego desde celular
 // Eventos para los botones de dirección
 document.getElementById('btnArriba').addEventListener('click', () => {
-    proximaDireccion = 'arriba';
+    if (direccion !== 'abajo') { // Evitar movimiento hacia abajo si se va hacia arriba
+        proximaDireccion = 'arriba';
+    }
 });
 
 document.getElementById('btnIzquierda').addEventListener('click', () => {
-    proximaDireccion = 'izquierda';
+    if (direccion !== 'derecha') { // Evitar movimiento hacia la derecha si se va hacia la izquierda
+        proximaDireccion = 'izquierda';
+    }
 });
 
 document.getElementById('btnDerecha').addEventListener('click', () => {
-    proximaDireccion = 'derecha';
+    if (direccion !== 'izquierda') { // Evitar movimiento hacia la izquierda si se va hacia la derecha
+        proximaDireccion = 'derecha';
+    }
 });
 
 document.getElementById('btnAbajo').addEventListener('click', () => {
-    proximaDireccion = 'abajo';
+    if (direccion !== 'arriba') { // Evitar movimiento hacia arriba si se va hacia abajo
+        proximaDireccion = 'abajo';
+    }
 });
+
 
 
 
