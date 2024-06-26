@@ -14,6 +14,33 @@
     max-width: 2000px;
     margin: auto;
 }
+
+.contenedor_juego {
+    width: 95%;
+    margin: auto;
+}
+
+#juego .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    width: max-content;
+    padding-bottom: 10px;
+    color: var(--color_blanco);
+    margin-bottom: 3rem;
+}
+
+#juego .titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: var(--color_blanco);
+}
+
 .conte-juego {
     width: max-content;
     margin: auto;
@@ -41,7 +68,7 @@
 
 
 .botonesJuego {
-    display: grid;
+    display: none;
     width: max-content;
     text-align: center;
     margin: auto;
@@ -69,13 +96,14 @@
 
 
 @media screen and (max-width: 768px){
-    #juego {
-    }
     .conte-juego {
         width: 100%;
     }
     #gameCanvas {
         width: 100%;
         height: 300px;
+    }
+    .botonesJuego {
+        display: block;
     }
 }
