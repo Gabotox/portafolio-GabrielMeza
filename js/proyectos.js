@@ -1,10 +1,17 @@
 const proyectos = [
     {
-        nombre: "Asosucre",
-        imagen: "img/proyectos/asosucre.png",
-        descripcion: "Plataforma de información deportiva HTML, CSS, JavaScript",
-        codigo: "https://github.com/Gabotox/PruebasAsosucre",
-        demo: "https://gabotox.github.io/PruebasAsosucre/"
+        nombre: "E-commerce - Ropa",
+        imagen: "img/proyectos/tienda.png",
+        descripcion: "Tienda Online, HTML, CSS, JS, PHP y MYSQL (Actualmente en proceso)",
+        codigo: "https://github.com/Gabotox/Tienda",
+        demo: "https://gabotox.github.io/Tienda/"
+    },
+    {
+        nombre: "Tub Exports",
+        imagen: "img/proyectos/tub.png",
+        descripcion: "Sitio web para empresa - HTML, CSS, JavaScript",
+        codigo: "https://github.com/Gabotox/tubexport",
+        demo: "https://gabotox.github.io/tubexport/"
     },
     {
         nombre: "Coffee Express",
@@ -21,18 +28,18 @@ const proyectos = [
         demo: "https://gabotox.github.io/Calculator/"
     },
     {
-        nombre: "E-commerce - Ropa",
-        imagen: "img/proyectos/tienda.png",
-        descripcion: "Tienda Online, HTML, CSS, JS, PHP y MYSQL (Actualmente en proceso)",
-        codigo: "https://github.com/Gabotox/Tienda",
-        demo: "https://gabotox.github.io/Tienda/"
-    },
-    {
         nombre: "FStore",
         imagen: "img/proyectos/store.png",
         descripcion: "E-commerce, HTML, CSS, JavaScript y JQuery",
         codigo: "https://github.com/Gabotox/FashionStore",
         demo: "https://gabotox.github.io/FashionStore/"
+    },
+    {
+        nombre: "Asosucre",
+        imagen: "img/proyectos/asosucre.png",
+        descripcion: "Plataforma de información deportiva - HTML, CSS, JavaScript",
+        codigo: "https://github.com/Gabotox/PruebasAsosucre",
+        demo: "https://gabotox.github.io/PruebasAsosucre/"
     },
     {
         nombre: "Gaming Reach",
