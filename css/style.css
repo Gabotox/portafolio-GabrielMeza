@@ -1330,7 +1330,6 @@ textarea {
     width: 100%;
 }
 .pies .creditos .proye {
-    border: 3px solid red;
     display: flex !important;
     font-weight: 500;
 }
@@ -1548,7 +1547,6 @@ textarea {
         padding-left: .8rem;
         padding-right: .8rem;
         margin-top: 1rem;
-        border: 3px solid red;
     }
     .pies .creditos .proye {
         margin: .5rem 0;
