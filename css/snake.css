@@ -1,0 +1,74 @@
+:root {
+    --color_rosado: #FF0080;
+    --color_blanco: #fff;
+    --color_background: #1e2326;
+    --gradiente_rosado_9: rgba(255, 0, 128, .9);
+    --color_negro: #000;
+}
+
+
+/* SECCIÓN JUEGO */
+
+#juego {
+    padding: 6.2rem 1rem;
+    max-width: 2000px;
+    margin: auto;
+}
+.conte-juego {
+    width: max-content;
+    margin: auto;
+    position: relative;
+}
+
+.puntaje {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: var(--color_blanco);
+    font-weight: 400;
+}
+#num {
+    color: var(--color_rosado);
+    font-weight: bold;
+}
+
+#gameCanvas {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+
+
+.botonesJuego {
+    display: grid;
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+.centroCol {
+    display: flex;
+    gap: 1rem;
+    margin: .5rem;
+}
+
+.botonesJuego button {
+    width: 50px; /* Ancho fijo para los botones */
+    height: 50px; /* Altura fija para los botones */
+    font-size: 20px; /* Tamaño de fuente para los iconos de dirección */
+}
+
+
+@media screen and (max-width: 768px){
+    #juego {
+        border: 2px solid red;
+    }
+    .conte-juego {
+        border: 2px solid blue;
+        width: 100%;
+    }
+    #gameCanvas {
+        width: 100%;
+        height: 300px;
+    }
+}

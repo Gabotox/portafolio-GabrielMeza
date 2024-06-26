@@ -17,6 +17,7 @@
 
     <!-- Estilos css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/snake.css">
 
     <!-- Animaciones AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -520,6 +521,29 @@
         </div>
     </section>
 
+
+    <section id="juego">
+        <div class="conte-juego">
+            <p class="puntaje">Puntaje: <span id="num"></span></p>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+            <div class="botonesJuego">
+                <div class="arribaCol">
+                    <button id="btnArriba">↑</button>
+                </div>
+                <div class="centroCol">
+                    <button id="btnIzquierda">←</button>
+                    <button id=""></button>
+                    <button id="btnDerecha">→</button>
+                </div>
+                <div class="abajoCol">
+                    <button id="btnAbajo">↓</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- FOOTER -->
     <footer class="pies">
         <a href="#inicioo" class="arriba">
@@ -605,6 +629,7 @@
     </footer>
 
 
+    <script src="js/snake.js"></script>
     <script src="js/proyectos.js"></script>
     <script src="js/js.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
