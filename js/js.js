@@ -1,10 +1,11 @@
-let icon = document.querySelector(".nav-responsive");
+let icon = document.querySelector("#ponerse");
 icon.addEventListener("click", mostrar);
-let bajo = document.getElementById("abajo");
-bajo.addEventListener("click", tapar);
+
 nav = document.getElementById("nav");
+
 let quitarlo = document.getElementById("quitarse");
-let poner = document.getElementById("ponerse");
+quitarlo.addEventListener("click", tapar)
+
 let items = document.querySelectorAll(".lin");
 let whatsapp = document.getElementById("btn-w");
 items.forEach((item) => {
@@ -13,17 +14,15 @@ items.forEach((item) => {
 
 function mostrar() {
     nav.style.left = "0px";
-    bajo.style.display = "block";
-    poner.style.display = "none";
+    icon.style.display = "none";
     quitarlo.style.display = "block";
     whatsapp.style.opacity = "0";
     whatsapp.style.zIndex = "-10";
 }
 
 function tapar() {
-    nav.style.left = "-90%";
-    bajo.style.display = "none";
-    poner.style.display = "block";
+    nav.style.left = "-200%";
+    icon.style.display = "block";
     quitarlo.style.display = "none";
     whatsapp.style.opacity = "1";
     whatsapp.style.zIndex = "99999";
@@ -41,6 +40,77 @@ function seleccionar(link) {
     })
 
 }
+
+
+
+
+
+
+
+
+const galeria = document.querySelector('.galeria');
+const verMasBtn = document.querySelector('.vermas');
+const cantidadInicial = 6; // Cantidad inicial de proyectos a mostrar
+let mostrarTodos = false; // Variable para controlar si se muestran todos los proyectos
+
+// Función para cargar proyectos
+function cargarProyectos() {
+    galeria.innerHTML = ''; // Limpiar galería antes de cargar proyectos
+
+    // Iterar sobre todos los proyectos
+    proyectos.forEach((proyecto, index) => {
+        // Mostrar solo los primeros 'cantidadInicial' proyectos inicialmente
+        if (!mostrarTodos && index >= cantidadInicial) return;
+
+        const proyectoHTML = `
+            <div class="proyecto">
+                <div class="fotog">
+                    <img src="${proyecto.imagen}" alt="${proyecto.nombre}">
+                    <div class="overlay">
+                        <h3 class="titulo">${proyecto.nombre}</h3>
+                        <p class="subt">${proyecto.descripcion}</p>
+                    </div>
+                </div>
+                <div class="botonesi">
+                    <a href="${proyecto.codigo}" class="botonesia" target="_blank">Código <i class="fa-solid fa-code"></i></a>
+                    <a href="${proyecto.demo}" class="botonesia" target="_blank">Demo <i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        `;
+        // Agregar el proyecto al contenedor de la galería
+        galeria.insertAdjacentHTML('beforeend', proyectoHTML);
+    });
+
+    // Actualizar texto del botón y manejar visibilidad de proyectos adicionales
+    const textoVerMas = verMasBtn.querySelector('.texto-vermas');
+    const iconoVerMas = verMasBtn.querySelector('.icono-vermas i');
+
+    if (proyectos.length > cantidadInicial) {
+        if (mostrarTodos) {
+            textoVerMas.textContent = 'Ver menos';
+            iconoVerMas.classList.remove('fa-eye');
+            iconoVerMas.classList.add('fa-eye-slash');
+        } else {
+            textoVerMas.textContent = 'Ver más';
+            iconoVerMas.classList.remove('fa-eye-slash');
+            iconoVerMas.classList.add('fa-eye');
+        }
+        verMasBtn.style.display = 'block'; // Mostrar el botón solo si hay más proyectos para mostrar
+    } else {
+        verMasBtn.style.display = 'none'; // Ocultar el botón si no hay más proyectos para mostrar
+    }
+}
+
+// Evento click para el botón "Ver más" / "Ver menos"
+verMasBtn.addEventListener('click', function () {
+    mostrarTodos = !mostrarTodos;
+    cargarProyectos(); // Volver a cargar proyectos según el estado
+});
+
+// Cargar inicialmente los proyectos
+cargarProyectos();
+
+
 
 
 
@@ -95,24 +165,57 @@ function slides2() {
     }
 }
 
-let btn = document.querySelector(".btn");
-btn.addEventListener("click", () => {
-    Swal.fire({
-        icon: 'success',
-        title: 'Enviado satisfactoriamente',
-        showConfirmButton: false,
-        timer: 1400
-    })
-    setTimeout(function () {
-        Swal.fire({
-            icon: 'error',
-            title: 'No mentiras, no tengo hosting XD',
-            showConfirmButton: false,
-            timer: 1700
-        })
-    }, 1401);
 
-})
+
+const formulario = document.getElementById('my-form');
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('correo').value;
+    const tema = document.getElementById('tema').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    const datos = {
+        nombre: nombre,
+        email: email,
+        tema: tema,
+        mensaje: mensaje
+    };
+
+    fetch('https://formspree.io/f/mvgppdba', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    })
+    .then(response => {
+        if (response.ok) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Enviado satisfactoriamente',
+                showConfirmButton: false,
+                timer: 1400
+            })
+            formulario.reset();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Hubo algún problema al enviar, intente nuevamente',
+                showConfirmButton: false,
+                timer: 1400
+            })
+            formulario.reset();
+        }
+    })
+    .catch(error => {
+        console.error('Error al enviar el mensaje:', error);
+        alert('Hubo un problema al enviar el mensaje');
+    });
+});
+
 
 
 
