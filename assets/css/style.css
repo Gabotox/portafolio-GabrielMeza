@@ -97,7 +97,6 @@ body {
 
 /* SECCIÓN DE MENÚ */
 .contenedor-header {
-    background: #1e2326;
     position: sticky;
     width: 100%;
     top: 0;
@@ -105,6 +104,21 @@ body {
     right: 0;
     z-index: 99;
     margin: auto;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    overflow: hidden; /* Importante para el efecto borroso */
+}
+
+.contenedor-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    backdrop-filter: blur(20px); /* Aplica el efecto de desenfoque */
+    z-index: -1; /* Coloca detrás del contenido del contenedor */
 }
 
 .contenedor-header .cab {
@@ -165,6 +179,8 @@ body {
     position: relative;
     padding: 5px 10px;
     border-radius: 3px;
+    text-transform: uppercase;
+    font-size: .9rem;
 }
 
 .contenedor-header .cab .lista .list .lin::after {
@@ -1366,10 +1382,11 @@ body {
 textarea {
     width: 100%;
     background: #252A2E;
-    padding: 10px;
+    padding: 1rem .8rem;
     border: 0;
     border-bottom: 2px solid #1e2326;
     color: var(--color_blanco);
+    font-size: .8rem !important;
 }
 
 .contacto .contee .formulario form input::placeholder {
@@ -1448,10 +1465,9 @@ textarea {
     text-decoration: none;
     width: 50px;
     height: 50px;
-    background: var(--color_negro);
+    background: var(--color_rosado);
     color: var(--color_blanco);
     border-radius: 100%;
-    font-size: 1.4rem;
     text-align: center;
     position: absolute;
     top: 0;
