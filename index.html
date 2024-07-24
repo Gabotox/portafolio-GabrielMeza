@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <!-- Íconos Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="assets/css/all.css">
 
     <!-- Ícono del navegador -->
     <link rel="shortcut icon" href="assets/img/iconos/curso.svg" type="image/x-icon">
@@ -19,13 +16,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/snake.css">
 
+    <!-- Normalize -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
     <!-- Animaciones AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
 
     <!-- Sweet Alert -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.0/sweetalert2.all.min.js"
-        integrity="sha512-59nEVFc+y/gLPL2WjOAQqCbvZbs49xWdTiCxVpjeKhb8oyMviN8fcwFRl8VxVzeLfiH/NKpklQqqLFg0NdZBaQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="assets/css/sweetAlert2.min.css">
 
 
     <title>Portafolio - Gabriel Meza</title>
@@ -122,7 +120,7 @@
                 <p class="descrip" data-aos="fade-up" data-aos-duration="300">Mi nombre es <a
                         href="https://www.facebook.com/profile.php?id=100019093819038" class="link_sobre"
                         target="_blank">Gabriel
-                        Meza</a>, tengo 22 años de edad, soy un estudiante de 8vo semestre del programa de Ingeniería de
+                        Meza</a>, soy un estudiante de 8vo semestre del programa de Ingeniería de
                     Sistemas y también Diseñador Web. Me gustaría tener la oportunidad de unirme a una empresa que me
                     permita
                     aplicar mis habilidades y conocimientos en un entorno en el que pueda continuar creciendo y
@@ -204,6 +202,11 @@
                         </div>
 
                         <div class="interes">
+                            <i class="fa-brands fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+
+                        <div class="interes">
                             <i class="fa-brands fa-java"></i>
                             <span>Java</span>
                         </div>
@@ -267,13 +270,13 @@
                 </div>
 
                 <div class="tecnologia">
-                    <i class="adobe">Ps</i>
-                    <h3 class="titulo">PHOTOSHOP</h3>
+                    <i class="adobe">Xd</i>
+                    <h3 class="titulo">XD</h3>
                 </div>
 
                 <div class="tecnologia">
-                    <i class="adobe">Xd</i>
-                    <h3 class="titulo">XD</h3>
+                    <i class="adobe">JQ</i>
+                    <h3 class="titulo">JQuery</h3>
                 </div>
 
                 <div class="tecnologia">
@@ -522,6 +525,8 @@
     </section>
 
     <!-- SECCIÓN DE JUEGO 
+     Minijuego Snake
+     
     <section id="juego">
         <div class="contenedor_juego">
             <h3 class="titulo" data-aos="fade-up" data-aos-duration="400">ENTRETENTE</h3>
@@ -556,62 +561,58 @@
         <div class="contenedor">
             <div class="icono">
                 <div class="logo">
-                    <img src="assets/img/yo/ReadyPlayerMe-Avatar.png" alt="">
+                    <img src="assets/img/yo/ReadyPlayerMe-Avatar.png" alt="Avatar">
                     <h1 class="title">GMEZA</h1>
                 </div>
-                <p class="des">Constantemente buscando aprender y actualizar mis conocimientos sobre las últimas
-                    tecnologías en el campo. Mi experiencia incluye la utilización de HTML, CSS, SASS, Bootstrap,
-                    JavaScript, etc.
+                <p class="des">
+                    Constantemente buscando aprender y actualizar mis conocimientos sobre las últimas tecnologías en el
+                    campo. Mi experiencia incluye la utilización de HTML, CSS, SASS, Bootstrap, JavaScript, etc.
                     <br>
-                    Si está interesado en contratar mis servicios o necesitas más información sobre mi, no dude en
+                    Si está interesado en contratar mis servicios o necesita más información sobre mí, no dude en
                     ponerse en contacto conmigo.
                 </p>
                 <div class="redes">
                     <a href="https://github.com/Gabotox" class="lin" target="_blank">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fab fa-github"></i>
                     </a>
                     <a href="https://web.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="https://twitter.com/gabcoderweb" class="lin" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fab fa-twitter"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/gabcoderweb" class="lin" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
             </div>
             <div class="listas">
                 <ul class="lista">
                     <h4 class="sobre">Sobre mí</h4>
-
                     <li class="list">
-                        <p class="lin"><i class="fa-solid fa-list-ol"></i> 22 Años</p>
+                        <p class="lin"><i class="fas fa-list-ol"></i> 22 Años</p>
                     </li>
                     <li class="list">
-                        <p class="lin"><i class="fa-solid fa-mars-stroke"></i> Masculino</p>
+                        <p class="lin"><i class="fas fa-mars-stroke"></i> Masculino</p>
                     </li>
                     <li class="list">
-                        <p class="lin"><i class="fa-solid fa-cake-candles"></i> 24 Diciembre</p>
+                        <p class="lin"><i class="fas fa-birthday-cake"></i> 24 Diciembre</p>
                     </li>
-
-
                 </ul>
                 <ul class="lista">
                     <h4 class="sobre">Contacto</h4>
                     <li class="list">
                         <a href="https://www.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank"><i
-                                class="fa-brands fa-facebook"></i> Facebook</a>
+                                class="fab fa-facebook"></i> Facebook</a>
                     </li>
                     <li class="list">
-                        <a href="https://www.instagram.com/gabcoderweb" class="lin" target="_blank"><i 2
-                                class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://www.instagram.com/gabcoderweb" class="lin" target="_blank"><i
+                                class="fab fa-instagram"></i> Instagram</a>
                     </li>
                     <li class="list">
                         <a href="https://www.linkedin.com/in/gabcoderweb" class="lin" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i> Linkedin</a>
+                                class="fab fa-linkedin"></i> Linkedin</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -634,9 +635,11 @@
 
 
     <!-- <script src="assets/js/snake.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/sweetAlert2.min.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script src="assets/js/proyectos.js"></script>
     <script src="assets/js/js.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
