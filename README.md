@@ -1,4 +1,6 @@
 🚀 Hola, bienvenido a mi portafolio, soy **Gabriel Meza**, un gusto tu visita.
+--
+Conóceme un poco: 
 
 🎓 Estudiante de Ingeniería de Sistemas, actualmente en el octavo semestre.  
 💻 Conocimientos en HTML, CSS, JavaScript, y jQuery.  
