@@ -211,6 +211,12 @@ formulario.addEventListener('submit', function (event) {
             }
         })
         .catch(error => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Hubo algún problema al enviar, intente nuevamente',
+                showConfirmButton: false,
+                timer: 1400
+            })
             console.error('Error al enviar el mensaje:', error);
             alert('Hubo un problema al enviar el mensaje');
         });
