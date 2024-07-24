@@ -169,7 +169,7 @@ function slides2() {
 
 const formulario = document.getElementById('my-form');
 
-formulario.addEventListener('submit', function(event) {
+formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const nombre = document.getElementById('nombre').value;
@@ -191,29 +191,29 @@ formulario.addEventListener('submit', function(event) {
         },
         body: JSON.stringify(datos)
     })
-    .then(response => {
-        if (response.ok) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Enviado satisfactoriamente',
-                showConfirmButton: false,
-                timer: 1400
-            })
-            formulario.reset();
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Hubo algún problema al enviar, intente nuevamente',
-                showConfirmButton: false,
-                timer: 1400
-            })
-            formulario.reset();
-        }
-    })
-    .catch(error => {
-        console.error('Error al enviar el mensaje:', error);
-        alert('Hubo un problema al enviar el mensaje');
-    });
+        .then(response => {
+            if (response.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Enviado satisfactoriamente',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+                formulario.reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hubo algún problema al enviar, intente nuevamente',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+                formulario.reset();
+            }
+        })
+        .catch(error => {
+            console.error('Error al enviar el mensaje:', error);
+            alert('Hubo un problema al enviar el mensaje');
+        });
 });
 
 
