@@ -1,6 +1,5 @@
 * 🚀 Hola, bienvenido a mi portafolio, soy Gabriel Meza, un gusto tu visita.
 ------------------------------------------------------------------------
-*
 * 🎓 Estudiante de Ingeniería, actualmente en el octavo semestre.
 * 💻 Conocimientos en HTML, CSS, JavaScript, y jQuery.
 * 🎨 Experiencia en diseño con Figma; aprecio el diseño tanto como la funcionalidad.
