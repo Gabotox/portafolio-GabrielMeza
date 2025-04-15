@@ -3,640 +3,393 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    <!-- Íconos Font Awesome -->
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
     <link rel="stylesheet" href="assets/css/all.css">
-
-    <!-- Ícono del navegador -->
-    <link rel="shortcut icon" href="assets/img/iconos/curso.svg" type="image/x-icon">
-
-    <!-- Estilos css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/snake.css">
-
-    <!-- Normalize -->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-
+    
     <!-- Animaciones AOS -->
     <link rel="stylesheet" href="assets/css/aos.css" />
 
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="assets/css/sweetAlert2.min.css">
-
-
-    <title>Portafolio - Gabriel Meza</title>
 </head>
+
+<style>
+
+    .seccion {
+        display: none;
+        height: 100vh;
+        padding: 2rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .seccion.activa {
+        display: block;
+        opacity: 1;
+    }
+
+    .seccion.desapareciendo {
+        opacity: 0;
+    }
+
+    .menu {
+        position: fixed;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 100;
+        background: red;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        width: max-content;
+    }
+
+    .menu ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+    }
+
+</style>
 
 <body>
 
-    <div id="inicioo"></div>
+    <nav class="menu">
+        <ul>
+            <li data-section="inicio">Inicio</li>
+            <li data-section="sobre-mi">Sobre mí</li>
+            <li data-section="skills">skills</li>
+            <li data-section="proyectos">Proyectos</li>
+            <li data-section="contacto">Contacto</li>
+        </ul>
+    </nav>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a class="btn-w" id="btn-w" href="https://wa.link/iuhor6">
-        <i class="fa-brands fa-square-whatsapp"></i>
-        Contáctame
-    </a>
+    <main id="contenido">
+        <section id="inicio" class="seccion activa inicio">
+            <!-- SECCIÓN DE INICIO -->
+            <div class="contenido-banner">
+                <div class="contenedor">
+                    <h1 class="titulo">Hola, soy <br><span>Gabriel Meza</span></h1>
+                    <h2 class="sub">Estudiante de Ingeniería de Sistemas</h2>
+                    <h2 class="sub">Desarrollador Web JR</h2>
 
-    <!-- SECCIÓN HEADER -->
-    <div class="contenedor-header">
+                    <div class="redes">
+                        <a href="https://github.com/Gabotox" class="lin" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/gabcoderweb" class="lin" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gabotox" class="lin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
 
-        <header class="cab">
-            <div class="logo">
-                <a href="https://www.facebook.com/profile.php?id=100019093819038" class="lin"
-                    target="_blank">GM<span>EZA</span></a>
-            </div>
-            <nav id="nav" class="navi">
-                <div class="sirv">
-                    <img src="assets/img/yo/ReadyPlayerMe-Avatar.png" alt="" class="Logo_nav">
-                    <ul class="lista">
-                        <li class="list"><a href="#inicioo" class="lin correr activar"
-                                onclick="seleccionar(this)">Inicio</a></li>
-                        <li class="list"><a href="#sobremi" class="lin correr" onclick="seleccionar(this)">Sobre mí</a>
-                        </li>
-                        <li class="list"><a href="#skills" class="lin correr"
-                                onclick="seleccionar(this)">Habilidades</a>
-                        </li>
-                        <li class="list"><a href="#portafolio" class="lin correr"
-                                onclick="seleccionar(this)">Portafolio</a></li>
-                        <li class="list"><a href="#contacto" class="lin correr" onclick="seleccionar(this)">Contacto</a>
-                        </li>
-                    </ul>
                 </div>
-            </nav>
-            <div class="nav-responsive">
-                <i class="fa-solid fa-bars" id="ponerse"></i>
-                <i class="fa-solid fa-xmark" id="quitarse"></i>
+                <div class="contenedor-img">
+                    <img src="assets/img/yo/yo.png" alt="">
+
+                </div>
             </div>
-        </header>
-    </div>
+        </section>
+        <section id="sobre-mi" class="seccion sobremi">
+            <div class="contenedor_sobre">
+                <div class="conte-sobremi">
+                    <h1 class="titulo" data-aos="fade-up" data-aos-duration="400">SOBRE MÍ
+                    </h1>
 
-    <!-- SECCIÓN DE INICIO -->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor">
-                <h1 class="titulo">Hola, soy <br><span>Gabriel Meza</span></h1>
-                <h2 class="sub">Estudiante de Ingeniería de Sistemas</h2>
-                <h2 class="sub">Diseñador Web</h2>
+                    <p class="descrip" data-aos="fade-up" data-aos-duration="300">Mi nombre es <a
+                            href="https://www.facebook.com/profile.php?id=100019093819038" class="link_sobre"
+                            target="_blank">Gabriel
+                            Meza</a>, soy un estudiante de 9no semestre del programa de Ingeniería de
+                        Sistemas. Me gustaría tener la oportunidad de unirme a una empresa que
+                        me
+                        permita
+                        aplicar mis habilidades y conocimientos en un entorno en el que pueda continuar creciendo y
+                        desarrollándome profesionalmente.
+                        <br>
+                        Como resultado de mi formación y dedicación a la educación, estoy seguro de que puedo aportar
+                        valor
+                        y contribuir al crecimiento de una organización que comparta mis valores y objetivos a largo
+                        plazo.
+                    </p>
 
-                <div class="redes">
-                    <a href="https://github.com/Gabotox" class="lin" target="_blank">
+                    <div class="botoni">
+                        <a href="https://www.facebook.com/profile.php?id=100019093819038" class="button"
+                            target="_blank">
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            Escribeme <i class="fa-brands fa-facebook-messenger"></i>
+                        </a>
+                        <a href="assets/cv/CV-GABRIEL MEZA.pdf" class="button" target="_blank"
+                            download="Curriculum - Gabriel Meza.pdf">
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            <span class="anima"></span>
+                            Descargar CV <i class="fa-solid fa-file-pdf"></i></a>
+                    </div>
+                </div>
+                <div class="contenido-seccion" data-aos="fade-right">
+
+                    <div class="conte-detalles">
+                        <h3 class="titulo"><i class="fa-regular fa-user"></i> Datos Personales</h3>
+                        <ul class="lista">
+                            <li class="list">
+                                <strong>Nacimiento</strong>
+                                24 Diciembre 2001
+                            </li>
+                            <li class="list">
+                                <strong>Teléfono</strong>
+                                +57 3115140908
+                            </li>
+                            <li class="list">
+                                <strong>E-mail</strong>
+                                juanmeza 242001 @gmail.com
+                            </li>
+                            <li class="list">
+                                <strong>Dirección</strong>
+                                Sincelejo (Sucre) - COLOMBIA
+                            </li>
+                            <li class="list">
+                                <strong>Especialidad</strong>
+                                <span>Diseñador/Desarrollador Web<i class="fa-solid fa-laptop-code"></i></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="conte-intereses">
+
+                        <h3 class="titulo"><i class="fa-regular fa-thumbs-up"></i>Intereses</h3>
+
+                        <div class="conte-inte">
+
+                            <div class="interes">
+                                <i class="fa-brands fa-square-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="interes">
+                                <i class="fa-solid fa-code"></i>
+                                <span>Programación</span>
+                            </div>
+
+                            <div class="interes">
+                                <i class="fa-brands fa-react"></i>
+                                <span>React</span>
+                            </div>
+
+                            <div class="interes">
+                                <i class="fa-brands fa-node-js"></i>
+                                <span>Node</span>
+                            </div>
+
+                            <div class="interes">
+                                <i class="fa-brands fa-laravel"></i>
+                                <span>Laravel</span>
+                            </div>
+
+                            <div class="interes">
+                                <i class="fa-brands fa-java"></i>
+                                <span>Java</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="seccion skills">
+            <div class="container_skills" style="margin-bottom: 4rem;">
+                <h3 class="titulo-t" data-aos="fade-up" data-aos-duration="400">HABILIDADES SÓLIDAS</h3>
+
+                <div class="tecnologias">
+
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-html5"></i>
+                        <h3 class="titulo">HTML 5</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h3 class="titulo">CSS 3</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-sass"></i>
+                        <h3 class="titulo">SASS</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-square-js"></i>
+                        <h3 class="titulo">JAVASCRIPT</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <h3 class="titulo">BOOTSTRAP</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <h3 class="titulo">GIT</h3>
+                    </div>
+                    <div class="tecnologia">
                         <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://web.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://twitter.com/gabcoderweb" class="lin" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    </a>
-                    <a href="https://www.linkedin.com/in/gabotox" class="lin" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
+                        <h3 class="titulo">GITHUB</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-figma"></i>
+                        <h3 class="titulo">FIGMA</h3>
+                    </div>
                 </div>
 
             </div>
-            <div class="contenedor-img">
-                <img src="assets/img/yo/ReadyPlayerMe-Avatar.png" alt="">
+            <div class="container_skills">
+                <h3 class="titulo-t" data-aos="fade-up" data-aos-duration="400">HABILIDADES BÁSICAS</h3>
 
-            </div>
-        </div>
-        <div style="height: 40px; overflow: hidden;" class="waves"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M-16.64,-18.23 C127.82,330.11 368.22,-218.56 562.92,107.08 L547.11,242.28 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg></div>
+                <div class="tecnologias">
 
-    </section>
+                    <div class="tecnologia">
+                        <i class="adobe">Ai</i>
+                        <h3 class="titulo">ILLUSTRATOR</h3>
+                    </div>
 
-    <!-- SECCIÓN SOBRE MÍ -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenedor_sobre">
-            <div class="conte-sobremi">
-                <h1 class="titulo" data-aos="fade-up" data-aos-duration="400">SOBRE MÍ
-                </h1>
+                    <div class="tecnologia">
+                        <i class="adobe">Xd</i>
+                        <h3 class="titulo">XD</h3>
+                    </div>
 
-                <p class="descrip" data-aos="fade-up" data-aos-duration="300">Mi nombre es <a
-                        href="https://www.facebook.com/profile.php?id=100019093819038" class="link_sobre"
-                        target="_blank">Gabriel
-                        Meza</a>, soy un estudiante de 8vo semestre del programa de Ingeniería de
-                    Sistemas y también Diseñador Web. Me gustaría tener la oportunidad de unirme a una empresa que me
-                    permita
-                    aplicar mis habilidades y conocimientos en un entorno en el que pueda continuar creciendo y
-                    desarrollándome profesionalmente.
-                    <br>
-                    Como resultado de mi formación y dedicación a la educación, estoy seguro de que puedo aportar valor
-                    y contribuir al crecimiento de una organización que comparta mis valores y objetivos a largo plazo.
-                </p>
+                    <div class="tecnologia">
+                        <i class="adobe">JQ</i>
+                        <h3 class="titulo">JQuery</h3>
+                    </div>
 
-                <div class="botoni">
-                    <a href="https://www.facebook.com/profile.php?id=100019093819038" class="button" target="_blank">
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        Escribeme <i class="fa-brands fa-facebook-messenger"></i>
-                    </a>
-                    <a href="assets/cv/CV-GABRIEL MEZA.pdf" class="button" target="_blank"
-                        download="Curriculum - Gabriel Meza.pdf">
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        <span class="anima"></span>
-                        Descargar CV <i class="fa-solid fa-file-pdf"></i></a>
-                </div>
-            </div>
-            <div class="contenido-seccion" data-aos="fade-right">
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-java"></i>
+                        <h3 class="titulo">JAVA</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-brands fa-php"></i>
+                        <h3 class="titulo">PHP</h3>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-solid fa-database"></i>
+                        <h3 class="titulo">MYSQL</h3>
+                    </div>
 
-                <div class="conte-detalles">
-                    <h3 class="titulo"><i class="fa-regular fa-user"></i> Datos Personales</h3>
-                    <ul class="lista">
-                        <li class="list">
-                            <strong>Nacimiento</strong>
-                            24 Diciembre 2001
-                        </li>
-                        <li class="list">
-                            <strong>Teléfono</strong>
-                            +57 3115140908
-                        </li>
-                        <li class="list">
-                            <strong>E-mail</strong>
-                            juanmeza 242001 @gmail.com
-                        </li>
-                        <li class="list">
-                            <strong>Dirección</strong>
-                            Sincelejo (Sucre) - COLOMBIA
-                        </li>
-                        <li class="list">
-                            <strong>Especialidad</strong>
-                            <span>Diseñador/Desarrollador Web<i class="fa-solid fa-laptop-code"></i></span>
-                        </li>
-                    </ul>
                 </div>
 
-                <div class="conte-intereses">
 
-                    <h3 class="titulo"><i class="fa-regular fa-thumbs-up"></i>Intereses</h3>
+            </div>
+        </section>
+        <section id="proyectos" class="seccion portafolio">
+            <div class="container_porta">
+                <h3 class="titulo-t4" data-aos="fade-up" data-aos-duration="400">PORTAFOLIO
+                </h3>
 
-                    <div class="conte-inte">
+                <div class="galeria" data-aos="zoom-in">
+                    <!-- Aquí se cargarán dinámicamente los proyectos -->
+                </div>
 
-                        <div class="interes">
-                            <i class="fa-brands fa-square-js"></i>
-                            <span>JavaScript</span>
+            </div>
+        </section>
+        <section id="contacto" class="seccion contacto">
+            <div class="contenedor_prin">
+                <h3 class="titulo" data-aos="fade-up" data-aos-duration="400">CONTACTO</h3>
+
+                <div class="contee" data-aos="zoom-in">
+                    <div class="continer">
+                        <div class="slider-contenedor">
+                            <div class="slider-test one">
+                                <img src="assets/img/slider/web1.jpg" alt="">
+                            </div>
+
+                            <div class="slider-test two">
+                                <img src="assets/img/slider/web2.jpg" alt="">
+                            </div>
+
+                            <div class="slider-test tree">
+                                <img src="assets/img/slider/web3.png" alt="">
+                            </div>
+
                         </div>
-
-                        <div class="interes">
-                            <i class="fa-solid fa-code"></i>
-                            <span>Programación</span>
-                        </div>
-
-                        <div class="interes">
-                            <i class="fa-brands fa-react"></i>
-                            <span>React</span>
-                        </div>
-
-                        <div class="interes">
-                            <i class="fa-brands fa-node-js"></i>
-                            <span>Node</span>
-                        </div>
-
-                        <div class="interes">
-                            <i class="fa-brands fa-laravel"></i>
-                            <span>Laravel</span>
-                        </div>
-
-                        <div class="interes">
-                            <i class="fa-brands fa-java"></i>
-                            <span>Java</span>
-                        </div>
-
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN SKILLS SÓLIDAS -->
-    <section id="skills" class="skills">
-        <div class="container_skills">
-            <h3 class="titulo-t" data-aos="fade-up" data-aos-duration="400">HABILIDADES SÓLIDAS</h3>
-
-            <div class="tecnologias">
-
-                <div class="tecnologia">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3 class="titulo">HTML 5</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h3 class="titulo">CSS 3</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-sass"></i>
-                    <h3 class="titulo">SASS</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-square-js"></i>
-                    <h3 class="titulo">JAVASCRIPT</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <h3 class="titulo">BOOTSTRAP</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <h3 class="titulo">GIT</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-github"></i>
-                    <h3 class="titulo">GITHUB</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-figma"></i>
-                    <h3 class="titulo">FIGMA</h3>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN SKILLS BÁSICAS -->
-    <section id="skills" class="skills sec">
-        <div class="container_skills">
-            <h3 class="titulo-t" data-aos="fade-up" data-aos-duration="400">HABILIDADES BÁSICAS</h3>
-
-            <div class="tecnologias">
-
-                <div class="tecnologia">
-                    <i class="adobe">Ai</i>
-                    <h3 class="titulo">ILLUSTRATOR</h3>
-                </div>
-
-                <div class="tecnologia">
-                    <i class="adobe">Xd</i>
-                    <h3 class="titulo">XD</h3>
-                </div>
-
-                <div class="tecnologia">
-                    <i class="adobe">JQ</i>
-                    <h3 class="titulo">JQuery</h3>
-                </div>
-
-                <div class="tecnologia">
-                    <i class="fa-brands fa-java"></i>
-                    <h3 class="titulo">JAVA</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-php"></i>
-                    <h3 class="titulo">PHP</h3>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-solid fa-database"></i>
-                    <h3 class="titulo">MYSQL</h3>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN EDUCACIÓN -->
-    <section id="educacion" class="educacion">
-        <div class="container_eduero">
-            <h3 class="titulo-ero" data-aos="fade-up" data-aos-duration="400">EDUCACIÓN</h3>
-
-            <div class="contenedor_edu">
-                <div class="filas">
-                    <div class="izquierda" data-aos="flip-left">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Ingeniería de Sistemas</h4>
-                        <span class="casa">Corporación Universitaria Antonio José de Sucre</span>
-                        <span class="fecha">2019 - Hasta la fecha</span>
-                        <p class="texto">Estudiante de Ingeniería de Sistemas en la
-                            Corporación Universitaria Antonio José de Sucre, 8vo semestre
-                        </p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="izquierda" data-aos="flip-right">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">CSS de 0 a Experto</h4>
-                        <span class="casa">UDEMY</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Aprendizaje de CSS</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="izquierda" data-aos="flip-left">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">HTML de 0 a Experto</h4>
-                        <span class="casa">UDEMY</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Aprendizaje de HTML</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="izquierda" data-aos="flip-right">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">JavaScript de Novato a Héroe</h4>
-                        <span class="casa">UDEMY</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Aprendizaje de JavaScript, Sintaxis, Manejo del DOM, etc..</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="izquierda" data-aos="flip-left">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Desarrollo Web - FrontEnd Web Developer</h4>
-                        <span class="casa">UDEMY</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Dominio del Desarrollo Web FrontEnd con HTML, CSS y JavaScript</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                </div>
-                <div class="filas-2">
-                    <div class="derecha" data-aos="flip-right">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Java</h4>
-                        <span class="casa">Corporación Universitaria Antonio José de Sucre</span>
-                        <span class="fecha">2021 - Actual</span>
-                        <p class="texto">Lenguaje mater de la Universidad.
-                            Sintáxis, POO, Estructuras de datos, etc..
-                        </p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="derecha" data-aos="flip-left">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Lógica de Programación y Algoritmos</h4>
-                        <span class="casa">UDEMY - Corporación Universidad Antonio José de Sucre</span>
-                        <span class="fecha">2021</span>
-                        <p class="texto">Primer nivel de aprendizaje en programación</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="derecha" data-aos="flip-right">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">PHP</h4>
-                        <span class="casa">UDEMY - Corporación Universitaria Antonio José de Sucre</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Aprendizaje de Backend con PHP</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="derecha" data-aos="flip-left">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Bootstrap</h4>
-                        <span class="casa">UDEMY</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Aprendizaje del Framework de CSS para responsive</p>
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-
-                    <div class="derecha" data-aos="flip-right">
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <span class="li"></span>
-                        <h4 class="titulo">Desarrollo de Sitios Responsivos</h4>
-                        <span class="casa">Fundación Carlos Slim</span>
-                        <span class="fecha">2022</span>
-                        <p class="texto">Dominio del Responsive Design</p>
-                        <i class="fa-solid fa-medal"></i>
+                    <div class="formulario">
+                        <img src="assets/img/iconos/yeti.png" alt="">
+                        <form id="my-form" action="https://formspree.io/f/mvgppdba" method="POST">
+                            <br>
+                            <br>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+                            <br>
+                            <input type="text" id="correo" name="correo" placeholder="Correo electrónico..." required>
+                            <br>
+                            <input type="text" id="tema" name="tema" placeholder="Tema..." required>
+                            <br>
+                            <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." cols="30" rows="3"
+                                required></textarea>
+                            <br>
+                            <button class="btn" type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+                        </form>
                     </div>
 
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN PORTAFOLIO -->
-    <section id="portafolio" class="portafolio">
-        <div class="container_porta">
-            <h3 class="titulo-t4" data-aos="fade-up" data-aos-duration="400">PORTAFOLIO
-            </h3>
-
-            <div class="galeria" data-aos="zoom-in">
-                <!-- Aquí se cargarán dinámicamente los proyectos -->
-            </div>
-
-            <button class="vermas">
-                <span class="texto-vermas">Ver más</span>
-                <span class="icono-vermas"><i class="fa-solid fa-eye"></i></span>
-            </button>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenedor_prin">
-            <h3 class="titulo" data-aos="fade-up" data-aos-duration="400">CONTACTO</h3>
-
-            <div class="contee" data-aos="zoom-in">
-                <div class="continer">
-                    <div class="slider-contenedor">
-                        <div class="slider-test one">
-                            <img src="assets/img/slider/web1.jpg" alt="">
-                        </div>
-
-                        <div class="slider-test two">
-                            <img src="assets/img/slider/web2.jpg" alt="">
-                        </div>
-
-                        <div class="slider-test tree">
-                            <img src="assets/img/slider/web3.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="formulario">
-                    <img src="assets/img/iconos/yeti.png" alt="">
-                    <form id="my-form" action="https://formspree.io/f/mvgppdba" method="POST">
-                        <br>
-                        <br>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
-                        <br>
-                        <input type="text" id="correo" name="correo" placeholder="Correo electrónico..." required>
-                        <br>
-                        <input type="text" id="tema" name="tema" placeholder="Tema..." required>
-                        <br>
-                        <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." cols="30" rows="3"
-                            required></textarea>
-                        <br>
-                        <button class="btn" type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE JUEGO 
-     Minijuego Snake
-     
-    <section id="juego">
-        <div class="contenedor_juego">
-            <h3 class="titulo" data-aos="fade-up" data-aos-duration="400">ENTRETENTE</h3>
-
-            <div class="conte-juego">
-                <p class="puntaje">Puntaje: <span id="num">0</span></p>
-                <canvas id="gameCanvas" width="400" height="400"></canvas>
-
-                <div class="botonesJuego">
-                    <div class="arribaCol">
-                        <button id="btnArriba"><i class="fa-solid fa-chevron-up"></i></button>
-                    </div>
-                    <div class="centroCol">
-                        <button id="btnIzquierda"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button id=""></button>
-                        <button id="btnDerecha"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-                    <div class="abajoCol">
-                        <button id="btnAbajo"><i class="fa-solid fa-chevron-down"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-
-    <!-- FOOTER -->
-    <footer class="pies">
-        <a href="#inicioo" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="contenedor">
-            <div class="icono">
-                <div class="logo">
-                    <img src="assets/img/yo/ReadyPlayerMe-Avatar.png" alt="Avatar">
-                    <h1 class="title">GMEZA</h1>
-                </div>
-                <p class="des">
-                    Constantemente buscando aprender y actualizar mis conocimientos sobre las últimas tecnologías en el
-                    campo. Mi experiencia incluye la utilización de HTML, CSS, SASS, Bootstrap, JavaScript, etc.
-                    <br>
-                    Si está interesado en contratar mis servicios o necesita más información sobre mí, no dude en
-                    ponerse en contacto conmigo.
-                </p>
-                <div class="redes">
-                    <a href="https://github.com/Gabotox" class="lin" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://web.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://twitter.com/gabcoderweb" class="lin" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/gabcoderweb" class="lin" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="listas">
-                <ul class="lista">
-                    <h4 class="sobre">Sobre mí</h4>
-                    <li class="list">
-                        <p class="lin"><i class="fas fa-list-ol"></i> 22 Años</p>
-                    </li>
-                    <li class="list">
-                        <p class="lin"><i class="fas fa-mars-stroke"></i> Masculino</p>
-                    </li>
-                    <li class="list">
-                        <p class="lin"><i class="fas fa-birthday-cake"></i> 24 Diciembre</p>
-                    </li>
-                </ul>
-                <ul class="lista">
-                    <h4 class="sobre">Contacto</h4>
-                    <li class="list">
-                        <a href="https://www.facebook.com/profile.php?id=100019093819038" class="lin" target="_blank"><i
-                                class="fab fa-facebook"></i> Facebook</a>
-                    </li>
-                    <li class="list">
-                        <a href="https://www.instagram.com/gabcoderweb" class="lin" target="_blank"><i
-                                class="fab fa-instagram"></i> Instagram</a>
-                    </li>
-                    <li class="list">
-                        <a href="https://www.linkedin.com/in/gabcoderweb" class="lin" target="_blank"><i
-                                class="fab fa-linkedin"></i> Linkedin</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="creditos">
-            <div class="cr">
-                <h5 class="proye">Desarrollado por <a href="https://web.facebook.com/profile.php?id=100019093819038"
-                        class="des" target="_blank">Gabriel Meza</a>
-                </h5>
-                <h5 class="proye">Inspirado en <a href="https://www.youtube.com/watch?v=2s19KJq49rQ" class="des"
-                        target="_blank">Código Web</a></h5>
-            </div>
-
-            <div class="botoni">
-                <p class="pee">&copy; Todos los derechos reservados <br>
-                    Elaborado solo con HTML-CSS-JavaScript <i class="fa-solid fa-heart"></i></p>
-            </div>
-        </div>
-
-    </footer>
+        </section>
+    </main>
 
 
-    <!-- <script src="assets/js/snake.js"></script> -->
+
+
+    <script>
+        const botones = document.querySelectorAll(".menu li");
+        const secciones = document.querySelectorAll(".seccion");
+        let actual = document.querySelector(".seccion.activa");
+
+        botones.forEach(boton => {
+            boton.addEventListener("click", () => {
+                const id = boton.getAttribute("data-section");
+
+                if (actual.id === id) return; // Si ya está activa, no hacer nada
+
+                const nueva = document.getElementById(id);
+
+                // Desaparecer la actual
+                actual.classList.remove("activa");
+                actual.classList.add("desapareciendo");
+
+                setTimeout(() => {
+                    actual.style.display = "none";
+                    actual.classList.remove("desapareciendo");
+
+                    // Activar la nueva
+                    nueva.style.display = "block";
+
+                    // Pequeño delay para que el opacity funcione
+                    setTimeout(() => {
+                        nueva.classList.add("activa");
+                        actual = nueva;
+                    }, 20);
+                }, 500); // mismo tiempo que el transition del CSS
+            });
+        });
+
+
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/sweetAlert2.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/proyectos.js"></script>
-    <script src="assets/js/js.js"></script>
+    <script src="assets/js/index.js"></script>
+
 </body>
 
 </html>
