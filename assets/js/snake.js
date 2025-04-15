@@ -31,9 +31,9 @@ function dibujarArea() {
 // Función para dibujar un segmento de la serpiente
 function dibujarSegmento(x, y, cabeza) {
     if (cabeza) {
-        ctx.fillStyle = '#FF0080'; // Color de la cabeza (por ejemplo, rojo)
+        ctx.fillStyle = '#FF0080'; // Color de la cabeza
     } else {
-        ctx.fillStyle = '#FFFFFF'; // Color del cuerpo (por ejemplo, rosa)
+        ctx.fillStyle = '#FFFFFF'; // Color del cuerpo
     }
     ctx.fillRect(x, y, SEGMENTO_SIZE, SEGMENTO_SIZE);
     ctx.strokeStyle = '#000000'; // Color del borde
@@ -42,7 +42,7 @@ function dibujarSegmento(x, y, cabeza) {
 
 // Función para dibujar la comida
 function dibujarComida() {
-    ctx.fillStyle = '#B18A23'; // Color de la comida (por ejemplo, verde)
+    ctx.fillStyle = '#B18A23'; // Color de la comida
     ctx.fillRect(comida.x, comida.y, COMIDA_SIZE, COMIDA_SIZE);
 }
 
